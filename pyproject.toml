@@ -1,0 +1,31 @@
+[project]
+name = "jeffref"
+version = "1.2.0"
+description = "Jeff reference app: Qwen3.8-27B alone versus a cascade of Jeff (0.8B) + LoRA adapters with the 27B behind it, on one Mac"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  # Jeff with its MLX backend (mlx-lm) and multi-adapter server. The v1.2 tag is created when Jeff v1.2 is released.
+  "jeff[mac] @ git+https://github.com/firelex/jeff@v1.2",
+  "huggingface-hub>=1.0",
+  "gradio>=5.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.4"]
+
+[project.scripts]
+jeffref = "jeffref.cli:main"
+jeffref-demo = "jeffref.app:main"
+jeffref-e2e = "jeffref.e2e:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,61 @@
+{
+ "rows": 500,
+ "seed": 20260930,
+ "load_s": 1.2542401249957038,
+ "test_sha256": "228d15550921ca19a4fcd20db77c3f42bac6b529f8ee6b46c7fc64df6763182d",
+ "calibration_rows": 200,
+ "adapter": {
+  "metrics": {
+   "count": 500,
+   "accuracy": 0.878,
+   "ece": 0.030910975684702642,
+   "brier": 0.19125304076578742,
+   "nll": 0.48478415549936493,
+   "zero_probability_count": 0,
+   "invalid": 0
+  },
+  "latency": {
+   "median_ms": 459.80470849826816,
+   "p95_ms": 512.8601374995923,
+   "mean_ms": 465.62074425407627,
+   "decisions_per_second": 2.147670636113944
+  },
+  "temperature": 1.0201196069020984
+ },
+ "base": {
+  "metrics": {
+   "count": 500,
+   "accuracy": 0.65,
+   "ece": 0.08238524118231275,
+   "brier": 0.5080918957338603,
+   "nll": 1.5441229257478237,
+   "zero_probability_count": 0,
+   "invalid": 0
+  },
+  "latency": {
+   "median_ms": 374.3843755000853,
+   "p95_ms": 421.15252149851585,
+   "mean_ms": 375.6922900877107,
+   "decisions_per_second": 2.661752786479956
+  },
+  "temperature": 1.0845714325759162
+ },
+ "adapter_calibration": {
+  "metrics": {
+   "count": 200,
+   "accuracy": 0.855,
+   "ece": 0.0627074667156044,
+   "brier": 0.20074680800179312,
+   "nll": 0.5302718679874779,
+   "zero_probability_count": 0,
+   "invalid": 0
+  },
+  "latency": {
+   "median_ms": 457.99895849995664,
+   "p95_ms": 506.80100624886103,
+   "mean_ms": 462.70190853516397,
+   "decisions_per_second": 2.161218662714902
+  },
+  "temperature": 1.0201196069020984
+ }
+}
